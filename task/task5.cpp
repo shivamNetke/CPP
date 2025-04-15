@@ -1,0 +1,41 @@
+// ambiguity task
+// date : 15/4/25
+// author : shivam netke
+
+#include <iostream>
+using namespace std;
+
+class Demo1 {
+public:
+    void display() {
+        cout << "hello shivam Demo1" << endl;
+    }
+};
+
+class Demo2 {
+public:
+    void display() {
+        cout << "hello shivam Demo2" << endl;
+    }
+};
+
+class Demo3 : public Demo1, public Demo2 {
+
+};
+
+int main(void) {
+    Demo3 obj;
+
+    obj.Demo1::display();
+    obj.Demo2::display(); 
+
+    return 0;
+}
+
+/*
+output
+
+hello shivam Demo1
+hello shivam Demo2
+
+*/ 
