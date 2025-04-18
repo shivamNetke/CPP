@@ -20,14 +20,20 @@ public:
 };
 
 class Demo3 : public Demo1, public Demo2 {
-
+public:
+    void show()
+    {
+        Demo1::display();
+        Demo2::display();
+    }
 };
 
 int main(void) {
     Demo3 obj;
 
-    obj.Demo1::display();
-    obj.Demo2::display(); 
+    obj.show(); 
+
+    
 
     return 0;
 }
