@@ -28,7 +28,7 @@ int main(void)
     Derived dObj;
     dObj.Display1();
     // dObj.Display1(10);  // error: no matching function for call to 'Derived::Display1(int)'
-    dObj.Base::Display1(10);\
+    dObj.Base::Display1(10);
 
     return 0;
 }
