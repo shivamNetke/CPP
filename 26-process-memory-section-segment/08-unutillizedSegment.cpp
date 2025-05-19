@@ -8,7 +8,7 @@ static int iNo2; // uninitialized data segment by default 0
 static int iNo5 = 100; // initialized data segment
 
 int main(void)
-{
+{ 
 
   int iNo3; // stack segment by default garbage
   {
